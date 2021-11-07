@@ -1,0 +1,49 @@
+.nav {
+  width: 100%;
+  min-height: 8.5%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 8.5rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.nav.change {
+  background-color: #1b242f;
+  border-bottom: 0.5rem solid #05c2c9;
+}
+
+.navBox {
+  width: clamp(40%, 70rem, 60%);
+  /* width: 70rem; */
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightcoral; */
+}
+
+.btn {
+  color: black;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn.change {
+  color: white;
+}
+
+.btn:hover {
+  color: #f53147;
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    padding: 0 1rem;
+  }
+}

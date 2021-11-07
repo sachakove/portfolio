@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap");
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  margin-bottom: 10rem;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  min-height: 100vh;
+  min-width: 65%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: transparent;
+  background-color: transparent;
+  z-index: 995;
+}
+
+.contentLeft {
+  min-height: 85%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 997;
+}
+
+.face {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 888;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.greeting {
+  max-width: 45%;
+  min-height: 20%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: yellow; */
+}
+
+.greeting hr {
+  transform: translateX(-100%);
+  width: 30%;
+  border-top: 1px solid #f83d39;
+}
+
+.nameBox {
+  max-width: 100%;
+  min-height: 65%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* background-color: teal; */
+}
+
+.firstName,
+.lastName {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(7rem, 4rem + 10vw, 20rem);
+  letter-spacing: -1.3rem;
+  overflow: hidden !important;
+}
+
+.firstName {
+  background: -webkit-linear-gradient(#ff6a01 30%, #f83d39 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lastName {
+  transform: translateY(-55%);
+  -webkit-text-stroke: 1px white;
+  background: -webkit-linear-gradient(#f83d39 30%, #f13790 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(-500%);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1025px) {
+  .firstName,
+  .lastName {
+    letter-spacing: 0rem;
+  }
+}

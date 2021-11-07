@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.title h1 {
+  font-size: 4rem;
+}
+
+.honeycombContainer {
+  position: relative;
+  margin: 5rem 0;
+  width: 50%;
+  display: flex;
+  --w: 175px;
+  --h: calc(var(--w) / 0.866); /* height = width / cos(30) */
+  --m: 4px;
+  --f: calc(1.5 * var(--h) + 3 * var(--m));
+  min-height: calc(var(--h) * 3);
+  overflow: hidden !important;
+}
+
+.honeycomb {
+  font-size: 0;
+}
+
+.item {
+  width: var(--w);
+  height: var(--h);
+  margin: var(--m);
+  display: inline-block;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background-image: linear-gradient(rgb(226, 226, 226), rgb(189, 189, 189));
+  margin-bottom: calc(var(--m) - var(--h) * 0.25);
+  position: relative;
+}
+
+.item img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.honeycomb::before {
+  content: "";
+  float: left;
+  height: 100%;
+  width: calc(var(--w) / 2 + var(--m));
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--f) - 3px),
+    #000 0 var(--f)
+  );
+}
+
+.change {
+  animation: animate 1s ease-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 1463px) {
+  .honeycombContainer {
+    height: calc(var(--h) * 4);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .honeycombContainer {
+    height: calc(var(--h) * 4.2);
+  }
+}
+
+@media screen and (max-width: 1097px) {
+  .honeycombContainer {
+    height: calc(var(--h) * 5);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .honeycombContainer {
+    --w: calc(9.2vw + 50px);
+    min-width: 80%;
+    height: calc(var(--h) * 3);
+  }
+}
+
+@media screen and (max-width: 536px) {
+  .honeycombContainer {
+    min-width: 98%;
+    height: calc(var(--h) * 4);
+  }
+}

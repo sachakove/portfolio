@@ -1,0 +1,58 @@
+.container {
+  min-height: 160vh;
+  max-width: 100%;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(
+    transparent,
+    rgba(27, 36, 47, 0.1) 20%,
+    rgba(27, 36, 47, 0.1) 80%,
+    transparent
+  );
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  transition: all 1s;
+  overflow: hidden;
+}
+.title h1 {
+  font-size: 4rem;
+}
+
+.projectsContainer {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change {
+  animation: animate 1.3s ease-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 1540px) {
+  .projectsContainer {
+    width: 100vw !important;
+  }
+}

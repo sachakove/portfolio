@@ -1,0 +1,160 @@
+.project {
+  min-height: 55rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.projectBox {
+  max-width: 80%;
+  height: clamp(35vh, 40vh * 1.2, 100vh);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: -20px 7px 30px rgba(0, 0, 0, 0.36);
+}
+
+.left {
+  position: absolute;
+  transform: translate(-50%);
+  top: 20%;
+  left: 25%;
+  overflow: hidden;
+  width: clamp(50%, 50rem, 70%);
+  height: auto;
+}
+.right {
+  min-height: 80%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  /* background-color: burlywood; */
+}
+
+.projectTitle {
+  font-size: 2.7rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.projectDesc,
+.projectTech {
+  width: 95%;
+  min-height: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  overflow: hidden;
+
+  /* background-color: cadetblue; */
+}
+
+.projectTech {
+  flex-wrap: wrap;
+}
+
+.projectTech span {
+  padding: 1rem;
+  border: 1px solid #05c2c9;
+  margin: 0.1rem;
+  font-size: 1.1rem;
+}
+
+.buttonsBox {
+  width: 85%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #1b242f;
+  border: 1px solid #05c2c9;
+  border-radius: 2rem;
+  color: #05c2c9;
+  font-size: 1.6rem;
+  padding: 1rem 7rem;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.btn:hover {
+  color: #1b242f;
+  border: 1px solid #1b242f;
+  background-color: #ff6a01;
+}
+
+.change {
+  animation: animate 2s ease-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .btn {
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (max-width: 969px) {
+  .projectBox {
+    justify-content: center;
+  }
+  .right {
+    width: clamp(50%, 40rem, 100%);
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .left {
+    top: 0%;
+    left: 50%;
+    width: clamp(30%, 30rem, 70%);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .right {
+    min-height: 100%;
+    overflow: hidden;
+  }
+  .left {
+    display: none;
+  }
+  .btn {
+    padding: 1rem 3rem;
+  }
+  .projectBox {
+    padding: 1rem 0;
+  }
+  .projectDesc {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  width: clamp(15vw, 8rem + 10vw, 65vw);
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0rem 0rem 2rem 3rem;
+  /* background-color: violet; */
+}
+.hexagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 120px;
+  min-height: 104px;
+  background: #05c2c9;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.icon {
+  width: 50%;
+}
+
+.textBox {
+  align-self: stretch;
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.textBox h3 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.textBox p {
+  margin-top: -3%;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 879px) {
+  .container {
+    min-width: 40%;
+  }
+
+  .textBox p {
+    text-align: center;
+  }
+}
