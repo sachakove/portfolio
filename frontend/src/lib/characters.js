@@ -133,8 +133,8 @@ export const projects = [
       "NodeJS",
       "Express",
     ],
-    site: "davidsfullstack.herokuapp.com",
-    github: "",
+    site: "https://david-sachakov.herokuapp.com",
+    github: "https://github.com/sachakove/portfolio",
     image: responsivePortfolio,
   },
 ];
