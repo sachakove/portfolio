@@ -1,17 +1,19 @@
 import classes from "./ContactForm.module.css";
 import { useState } from "react";
+import Loader from "../UI/Loader";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSent(true);
+    setLoading(true);
     try {
-      setSent(true);
-
       await fetch("/send_mail", {
         method: "POST",
         body: JSON.stringify({ name: name, email: email, message: message }),
@@ -19,6 +21,7 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
+      setLoading(false);
     } catch (error) {
       console.log(error.message);
     }
@@ -31,7 +34,12 @@ const ContactForm = () => {
           <h1>Contact</h1>
           <div />
         </div>
-        {sent && (
+        {loading && (
+          <span className={classes.greetBox}>
+            <Loader />
+          </span>
+        )}
+        {sent && !loading && (
           <span className={classes.greetBox}>
             <h1>Thank you !</h1>
           </span>

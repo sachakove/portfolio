@@ -21,14 +21,14 @@ app.post("/send_mail", cors(), async (req, res) => {
       pass: process.env.MAIL_PASS,
     },
   });
-
-  await transport.sendMail({
+  const response = await transport.sendMail({
     to: process.env.MAIL_USER,
     subject: "Portfolio Site Contact",
     html: `<h2>Here is the message</h2>
     <h3>The message from ${name} ${email}</h3>
       <p>${message}</p>`,
   });
+  return res.send(response);
 });
 
 const path = require("path");

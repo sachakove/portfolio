@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d32629d6.chunk.css",
+    "main.js": "/static/js/main.f3264c3c.chunk.js",
+    "main.js.map": "/static/js/main.f3264c3c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.da8abc81.js",
+    "runtime-main.js.map": "/static/js/runtime-main.da8abc81.js.map",
+    "static/js/2.ac3431c8.chunk.js": "/static/js/2.ac3431c8.chunk.js",
+    "static/js/2.ac3431c8.chunk.js.map": "/static/js/2.ac3431c8.chunk.js.map",
+    "static/js/3.466f1fda.chunk.js": "/static/js/3.466f1fda.chunk.js",
+    "static/js/3.466f1fda.chunk.js.map": "/static/js/3.466f1fda.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d32629d6.chunk.css.map": "/static/css/main.d32629d6.chunk.css.map",
+    "static/js/2.ac3431c8.chunk.js.LICENSE.txt": "/static/js/2.ac3431c8.chunk.js.LICENSE.txt",
+    "static/media/About.1802f375.jpg": "/static/media/About.1802f375.jpg",
+    "static/media/chess.75270178.svg": "/static/media/chess.75270178.svg",
+    "static/media/confusion.b953186f.svg": "/static/media/confusion.b953186f.svg",
+    "static/media/graduation-hat.594abc3b.svg": "/static/media/graduation-hat.594abc3b.svg",
+    "static/media/mongoose1.ff05e88f.svg": "/static/media/mongoose1.ff05e88f.svg",
+    "static/media/react.82ed2673.svg": "/static/media/react.82ed2673.svg",
+    "static/media/responsive-Portfolio.1091ddb4.png": "/static/media/responsive-Portfolio.1091ddb4.png",
+    "static/media/responsive-marketPlace.de89ad9f.png": "/static/media/responsive-marketPlace.de89ad9f.png",
+    "static/media/responsive.1defc55f.png": "/static/media/responsive.1defc55f.png",
+    "static/media/team.b6a267d3.svg": "/static/media/team.b6a267d3.svg",
+    "static/media/yep.01d3e2f1.svg": "/static/media/yep.01d3e2f1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da8abc81.js",
+    "static/js/2.ac3431c8.chunk.js",
+    "static/css/main.d32629d6.chunk.css",
+    "static/js/main.f3264c3c.chunk.js"
+  ]
+}
